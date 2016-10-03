@@ -1,6 +1,5 @@
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.List;
+package coursera;
+
 import java.util.Stack;
 
 /**

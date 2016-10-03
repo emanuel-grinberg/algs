@@ -1,3 +1,5 @@
+package coursera;
+
 import java.util.Arrays;
 
 /**
