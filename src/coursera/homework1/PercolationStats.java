@@ -1,10 +1,12 @@
+package coursera.homework1;
+
 import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.StdStats;
 
 public class PercolationStats {
     private Percolation percolation;
-    double[] thresholds;
-    int n;
+    private double[] thresholds;
+    private int n;
 
     public PercolationStats(int n, int trials) {
         if (n <= 0 || trials <= 0) throw new IllegalArgumentException();
@@ -42,8 +44,8 @@ public class PercolationStats {
     }           // high endpoint of 95% confidence interval
 
     public static void main(String[] args) {
-        int n = 200;/*Integer.valueOf(args[0]);*/
-        int trials = 100;/*Integer.valueOf(args[1]);*/
+        int n = Integer.valueOf(args[0]);
+        int trials = Integer.valueOf(args[1]);
         PercolationStats percolationStats = new PercolationStats(n, trials);
         System.out.println(String.format("mean                    = %f", percolationStats.mean()));
         System.out.println(String.format("stddev                  = %f", percolationStats.stddev()));

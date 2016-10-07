@@ -1,3 +1,5 @@
+package coursera.homework1;
+
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
 /**
@@ -49,9 +51,6 @@ public class Percolation {
     public boolean percolates() {
         return quickUnion.connected(0, N * N + 1);
     }
-
-    public static void main(String[] args) {
-    } // test client (optional)
 
     private int arrayIndex(int i, int j) {
         return (i - 1) * N + j;
