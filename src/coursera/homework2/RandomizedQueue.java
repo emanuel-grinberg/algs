@@ -1,3 +1,5 @@
+package coursera.homework2;
+
 import edu.princeton.cs.algs4.StdRandom;
 
 import java.util.Iterator;
@@ -55,7 +57,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         validate();
         int index = StdRandom.uniform(size);
         Item item = items[index];
-        items[index] = items[size--];
+        items[index] = items[--size];
         if (items.length / 4 > size) {
             halfArray();
         }
@@ -73,8 +75,8 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         private int cursor;
 
         private MyIterator() {
-            itemsToIterate = (Item[]) new Object[items.length];
-            for (int i = 0; i < items.length; i++) {
+            itemsToIterate = (Item[]) new Object[size];
+            for (int i = 0; i < size; i++) {
                 itemsToIterate[i] = items[i];
             }
             StdRandom.shuffle(itemsToIterate);
